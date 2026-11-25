@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "storeManager", "storeManager\storeManager.csproj", "{F3428C8A-15A6-4827-97B0-CF8422AE7502}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UI-CA", "UI-CA\UI-CA.csproj", "{F3428C8A-15A6-4827-97B0-CF8422AE7502}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{67B99969-694E-4440-A936-C02BC7D8BD40}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -12,5 +14,9 @@ Global
 		{F3428C8A-15A6-4827-97B0-CF8422AE7502}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F3428C8A-15A6-4827-97B0-CF8422AE7502}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F3428C8A-15A6-4827-97B0-CF8422AE7502}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67B99969-694E-4440-A936-C02BC7D8BD40}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67B99969-694E-4440-A936-C02BC7D8BD40}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67B99969-694E-4440-A936-C02BC7D8BD40}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67B99969-694E-4440-A936-C02BC7D8BD40}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
