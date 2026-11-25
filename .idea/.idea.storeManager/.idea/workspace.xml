@@ -14,31 +14,54 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="047ca166-fff1-4e17-894c-5693a5331ff2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/UI-CA/ConsoleUi.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UI-CA/Program.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UI-CA/UI-CA.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.storeManager/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.storeManager/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storeManager.sln" beforeDir="false" afterPath="$PROJECT_DIR$/StoreManager.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storeManager/storeManager.csproj" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/BL/IManager.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BL/Manager.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DAL/IRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DAL/RepositoryInMemory.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UI-CA/extensions/CategoryExtensions.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UI-CA/extensions/ProductExtensions.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UI-CA/extensions/StoreExtensions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.storeManager/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.storeManager/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/Category.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Category.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/Domain.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Domain.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/Product.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Product.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/Store.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Store.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StoreManager.sln" beforeDir="false" afterPath="$PROJECT_DIR$/StoreManager.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI-CA/ConsoleUi.cs" beforeDir="false" afterPath="$PROJECT_DIR$/UI-CA/ConsoleUi.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI-CA/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/UI-CA/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI-CA/UI-CA.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/UI-CA/UI-CA.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DpaMonitoringSettings">
+    <option name="firstShow" value="false" />
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Domein/Class1.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BL/Class1.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BL/IManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BL/Manager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DAL/Class1.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DAL/IRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DAL/Repository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Domain/Category.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Domain/Class1.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Domain/Product.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Domain/Store.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/UI-CA/Program.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/storeManager/Ui.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/UI-CA/extensions/CategoryExtensions.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/UI-CA/extensions/ProductExtensions.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/UI-CA/extensions/StoreExtensions.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 6,
-  "fromUser": false
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6,
+  &quot;fromUser&quot;: false
+}</component>
   <component name="ProjectId" id="3McCSsaehUxSyiyW2KBZtkZtBew" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -46,6 +69,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    ".NET Project.storeManager.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.cidr.known.project.marker": "true",
@@ -55,11 +79,13 @@
     "cidr.known.project.marker": "true",
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/github/StoreManager",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm"
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.lookFeel"
   }
 }]]></component>
   <component name="RunManager">
@@ -119,5 +145,9 @@
         </breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
