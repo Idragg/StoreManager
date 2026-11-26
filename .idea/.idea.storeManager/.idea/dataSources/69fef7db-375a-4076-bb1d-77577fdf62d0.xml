@@ -568,7 +568,7 @@
     </routine>
     <schema id="214" parent="1" name="main">
       <Current>1</Current>
-      <LastIntrospectionLocalTimestamp>2026-11-26.17:37:50</LastIntrospectionLocalTimestamp>
+      <LastIntrospectionLocalTimestamp>2026-11-26.22:07:08</LastIntrospectionLocalTimestamp>
     </schema>
     <argument id="215" parent="14">
       <ArgumentDirection>R</ArgumentDirection>
@@ -1807,172 +1807,368 @@
       <Position>1</Position>
     </argument>
     <table id="627" parent="214" name="Categories"/>
-    <table id="628" parent="214" name="Products"/>
-    <table id="629" parent="214" name="StoreProducts"/>
-    <table id="630" parent="214" name="Stores"/>
-    <table id="631" parent="214" name="sqlite_master">
+    <table id="628" parent="214" name="Employees"/>
+    <table id="629" parent="214" name="OrderLines"/>
+    <table id="630" parent="214" name="Orders"/>
+    <table id="631" parent="214" name="ProductSupplier"/>
+    <table id="632" parent="214" name="Products"/>
+    <table id="633" parent="214" name="StoreProducts"/>
+    <table id="634" parent="214" name="Stores"/>
+    <table id="635" parent="214" name="Suppliers"/>
+    <table id="636" parent="214" name="sqlite_master">
       <System>1</System>
     </table>
-    <table id="632" parent="214" name="sqlite_sequence">
+    <table id="637" parent="214" name="sqlite_sequence">
       <System>1</System>
     </table>
-    <column id="633" parent="627" name="Id">
+    <column id="638" parent="627" name="Id">
       <AutoIncrement>1</AutoIncrement>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>INTEGER|0s</StoredType>
     </column>
-    <column id="634" parent="627" name="Name">
+    <column id="639" parent="627" name="Name">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>TEXT|0s</StoredType>
     </column>
-    <column id="635" parent="627" name="Description">
+    <column id="640" parent="627" name="Description">
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StoredType>TEXT|0s</StoredType>
     </column>
-    <column id="636" parent="627" name="StoreId">
+    <column id="641" parent="627" name="StoreId">
       <Position>4</Position>
       <StoredType>INTEGER|0s</StoredType>
     </column>
-    <foreign-key id="637" parent="627" name="FK_Categories_Stores_StoreId">
+    <foreign-key id="642" parent="627" name="FK_Categories_Stores_StoreId">
       <ColNames>StoreId</ColNames>
       <RefColNames>Id</RefColNames>
       <RefTableName>Stores</RefTableName>
     </foreign-key>
-    <index id="638" parent="627" name="IX_Categories_StoreId">
+    <index id="643" parent="627" name="IX_Categories_StoreId">
       <ColNames>StoreId</ColNames>
     </index>
-    <key id="639" parent="627" name="PK_Categories">
+    <key id="644" parent="627" name="PK_Categories">
       <ColNames>Id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="640" parent="628" name="Id">
+    <column id="645" parent="628" name="Id">
       <AutoIncrement>1</AutoIncrement>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>INTEGER|0s</StoredType>
     </column>
-    <column id="641" parent="628" name="Name">
+    <column id="646" parent="628" name="FirstName">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>TEXT|0s</StoredType>
     </column>
-    <column id="642" parent="628" name="Price">
+    <column id="647" parent="628" name="LastName">
       <NotNull>1</NotNull>
       <Position>3</Position>
-      <StoredType>REAL|0s</StoredType>
+      <StoredType>TEXT|0s</StoredType>
     </column>
-    <column id="643" parent="628" name="Stock">
+    <column id="648" parent="628" name="Email">
       <NotNull>1</NotNull>
       <Position>4</Position>
-      <StoredType>INTEGER|0s</StoredType>
+      <StoredType>TEXT|0s</StoredType>
     </column>
-    <column id="644" parent="628" name="CategoryId">
+    <column id="649" parent="628" name="StoreId">
       <NotNull>1</NotNull>
       <Position>5</Position>
       <StoredType>INTEGER|0s</StoredType>
     </column>
-    <foreign-key id="645" parent="628" name="FK_Products_Categories_CategoryId">
-      <ColNames>CategoryId</ColNames>
-      <OnDelete>cascade</OnDelete>
-      <RefColNames>Id</RefColNames>
-      <RefTableName>Categories</RefTableName>
-    </foreign-key>
-    <index id="646" parent="628" name="IX_Products_CategoryId">
-      <ColNames>CategoryId</ColNames>
-    </index>
-    <key id="647" parent="628" name="PK_Products">
-      <ColNames>Id</ColNames>
-      <Primary>1</Primary>
-    </key>
-    <column id="648" parent="629" name="StoreId">
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-      <StoredType>INTEGER|0s</StoredType>
-    </column>
-    <column id="649" parent="629" name="ProductId">
-      <NotNull>1</NotNull>
-      <Position>2</Position>
-      <StoredType>INTEGER|0s</StoredType>
-    </column>
-    <column id="650" parent="629" name="Stock">
-      <NotNull>1</NotNull>
-      <Position>3</Position>
-      <StoredType>INTEGER|0s</StoredType>
-    </column>
-    <column id="651" parent="629" name="SellingPrice">
-      <NotNull>1</NotNull>
-      <Position>4</Position>
-      <StoredType>REAL|0s</StoredType>
-    </column>
-    <foreign-key id="652" parent="629" name="FK_StoreProducts_Stores_StoreId">
+    <foreign-key id="650" parent="628" name="FK_Employees_Stores_StoreId">
       <ColNames>StoreId</ColNames>
       <OnDelete>cascade</OnDelete>
       <RefColNames>Id</RefColNames>
       <RefTableName>Stores</RefTableName>
     </foreign-key>
-    <foreign-key id="653" parent="629" name="FK_StoreProducts_Products_ProductId">
+    <index id="651" parent="628" name="IX_Employees_StoreId">
+      <ColNames>StoreId</ColNames>
+    </index>
+    <key id="652" parent="628" name="PK_Employees">
+      <ColNames>Id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="653" parent="629" name="OrderId">
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StoredType>INTEGER|0s</StoredType>
+    </column>
+    <column id="654" parent="629" name="ProductId">
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StoredType>INTEGER|0s</StoredType>
+    </column>
+    <column id="655" parent="629" name="Quantity">
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+      <StoredType>INTEGER|0s</StoredType>
+    </column>
+    <column id="656" parent="629" name="UnitsPrice">
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+      <StoredType>REAL|0s</StoredType>
+    </column>
+    <foreign-key id="657" parent="629" name="FK_OrderLines_Orders_OrderId">
+      <ColNames>OrderId</ColNames>
+      <OnDelete>cascade</OnDelete>
+      <RefColNames>Id</RefColNames>
+      <RefTableName>Orders</RefTableName>
+    </foreign-key>
+    <foreign-key id="658" parent="629" name="FK_OrderLines_Products_ProductId">
       <ColNames>ProductId</ColNames>
       <OnDelete>cascade</OnDelete>
       <RefColNames>Id</RefColNames>
       <RefTableName>Products</RefTableName>
     </foreign-key>
-    <index id="654" parent="629" name="sqlite_autoindex_StoreProducts_1">
-      <ColNames>StoreId
+    <index id="659" parent="629" name="sqlite_autoindex_OrderLines_1">
+      <ColNames>OrderId
 ProductId</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Unique>1</Unique>
     </index>
-    <index id="655" parent="629" name="IX_StoreProducts_ProductId">
+    <index id="660" parent="629" name="IX_OrderLines_ProductId">
       <ColNames>ProductId</ColNames>
     </index>
-    <key id="656" parent="629" name="PK_StoreProducts">
-      <ColNames>StoreId
+    <key id="661" parent="629" name="PK_OrderLines">
+      <ColNames>OrderId
 ProductId</ColNames>
       <Primary>1</Primary>
-      <UnderlyingIndexName>sqlite_autoindex_StoreProducts_1</UnderlyingIndexName>
+      <UnderlyingIndexName>sqlite_autoindex_OrderLines_1</UnderlyingIndexName>
     </key>
-    <column id="657" parent="630" name="Id">
+    <column id="662" parent="630" name="Id">
       <AutoIncrement>1</AutoIncrement>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>INTEGER|0s</StoredType>
     </column>
-    <column id="658" parent="630" name="Name">
+    <column id="663" parent="630" name="OrderDate">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>TEXT|0s</StoredType>
     </column>
-    <key id="659" parent="630" name="PK_Stores">
-      <ColNames>Id</ColNames>
-      <Primary>1</Primary>
-    </key>
-    <column id="660" parent="631" name="type">
-      <Position>1</Position>
-      <StoredType>TEXT|0s</StoredType>
-    </column>
-    <column id="661" parent="631" name="name">
-      <Position>2</Position>
-      <StoredType>TEXT|0s</StoredType>
-    </column>
-    <column id="662" parent="631" name="tbl_name">
+    <column id="664" parent="630" name="DateOnly">
+      <NotNull>1</NotNull>
       <Position>3</Position>
       <StoredType>TEXT|0s</StoredType>
     </column>
-    <column id="663" parent="631" name="rootpage">
+    <column id="665" parent="630" name="Status">
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+      <StoredType>INTEGER|0s</StoredType>
+    </column>
+    <column id="666" parent="630" name="StoreId">
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+      <StoredType>INTEGER|0s</StoredType>
+    </column>
+    <column id="667" parent="630" name="SupplierId">
+      <NotNull>1</NotNull>
+      <Position>6</Position>
+      <StoredType>INTEGER|0s</StoredType>
+    </column>
+    <foreign-key id="668" parent="630" name="FK_Orders_Stores_StoreId">
+      <ColNames>StoreId</ColNames>
+      <OnDelete>cascade</OnDelete>
+      <RefColNames>Id</RefColNames>
+      <RefTableName>Stores</RefTableName>
+    </foreign-key>
+    <foreign-key id="669" parent="630" name="FK_Orders_Suppliers_SupplierId">
+      <ColNames>SupplierId</ColNames>
+      <OnDelete>cascade</OnDelete>
+      <RefColNames>Id</RefColNames>
+      <RefTableName>Suppliers</RefTableName>
+    </foreign-key>
+    <index id="670" parent="630" name="IX_Orders_StoreId">
+      <ColNames>StoreId</ColNames>
+    </index>
+    <index id="671" parent="630" name="IX_Orders_SupplierId">
+      <ColNames>SupplierId</ColNames>
+    </index>
+    <key id="672" parent="630" name="PK_Orders">
+      <ColNames>Id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="673" parent="631" name="ProductsId">
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StoredType>INTEGER|0s</StoredType>
+    </column>
+    <column id="674" parent="631" name="SuppliersId">
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StoredType>INTEGER|0s</StoredType>
+    </column>
+    <foreign-key id="675" parent="631" name="FK_ProductSupplier_Products_ProductsId">
+      <ColNames>ProductsId</ColNames>
+      <OnDelete>cascade</OnDelete>
+      <RefColNames>Id</RefColNames>
+      <RefTableName>Products</RefTableName>
+    </foreign-key>
+    <foreign-key id="676" parent="631" name="FK_ProductSupplier_Suppliers_SuppliersId">
+      <ColNames>SuppliersId</ColNames>
+      <OnDelete>cascade</OnDelete>
+      <RefColNames>Id</RefColNames>
+      <RefTableName>Suppliers</RefTableName>
+    </foreign-key>
+    <index id="677" parent="631" name="sqlite_autoindex_ProductSupplier_1">
+      <ColNames>ProductsId
+SuppliersId</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <Unique>1</Unique>
+    </index>
+    <index id="678" parent="631" name="IX_ProductSupplier_SuppliersId">
+      <ColNames>SuppliersId</ColNames>
+    </index>
+    <key id="679" parent="631" name="PK_ProductSupplier">
+      <ColNames>ProductsId
+SuppliersId</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>sqlite_autoindex_ProductSupplier_1</UnderlyingIndexName>
+    </key>
+    <column id="680" parent="632" name="Id">
+      <AutoIncrement>1</AutoIncrement>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StoredType>INTEGER|0s</StoredType>
+    </column>
+    <column id="681" parent="632" name="Name">
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StoredType>TEXT|0s</StoredType>
+    </column>
+    <column id="682" parent="632" name="CategoryId">
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+      <StoredType>INTEGER|0s</StoredType>
+    </column>
+    <foreign-key id="683" parent="632" name="FK_Products_Categories_CategoryId">
+      <ColNames>CategoryId</ColNames>
+      <OnDelete>cascade</OnDelete>
+      <RefColNames>Id</RefColNames>
+      <RefTableName>Categories</RefTableName>
+    </foreign-key>
+    <index id="684" parent="632" name="IX_Products_CategoryId">
+      <ColNames>CategoryId</ColNames>
+    </index>
+    <key id="685" parent="632" name="PK_Products">
+      <ColNames>Id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="686" parent="633" name="StoreId">
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StoredType>INTEGER|0s</StoredType>
+    </column>
+    <column id="687" parent="633" name="ProductId">
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StoredType>INTEGER|0s</StoredType>
+    </column>
+    <column id="688" parent="633" name="Stock">
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+      <StoredType>INTEGER|0s</StoredType>
+    </column>
+    <column id="689" parent="633" name="SellingPrice">
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+      <StoredType>REAL|0s</StoredType>
+    </column>
+    <foreign-key id="690" parent="633" name="FK_StoreProducts_Stores_StoreId">
+      <ColNames>StoreId</ColNames>
+      <OnDelete>cascade</OnDelete>
+      <RefColNames>Id</RefColNames>
+      <RefTableName>Stores</RefTableName>
+    </foreign-key>
+    <foreign-key id="691" parent="633" name="FK_StoreProducts_Products_ProductId">
+      <ColNames>ProductId</ColNames>
+      <OnDelete>cascade</OnDelete>
+      <RefColNames>Id</RefColNames>
+      <RefTableName>Products</RefTableName>
+    </foreign-key>
+    <index id="692" parent="633" name="sqlite_autoindex_StoreProducts_1">
+      <ColNames>StoreId
+ProductId</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <Unique>1</Unique>
+    </index>
+    <index id="693" parent="633" name="IX_StoreProducts_ProductId">
+      <ColNames>ProductId</ColNames>
+    </index>
+    <key id="694" parent="633" name="PK_StoreProducts">
+      <ColNames>StoreId
+ProductId</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>sqlite_autoindex_StoreProducts_1</UnderlyingIndexName>
+    </key>
+    <column id="695" parent="634" name="Id">
+      <AutoIncrement>1</AutoIncrement>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StoredType>INTEGER|0s</StoredType>
+    </column>
+    <column id="696" parent="634" name="Name">
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StoredType>TEXT|0s</StoredType>
+    </column>
+    <key id="697" parent="634" name="PK_Stores">
+      <ColNames>Id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="698" parent="635" name="Id">
+      <AutoIncrement>1</AutoIncrement>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StoredType>INTEGER|0s</StoredType>
+    </column>
+    <column id="699" parent="635" name="Name">
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StoredType>TEXT|0s</StoredType>
+    </column>
+    <column id="700" parent="635" name="Email">
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+      <StoredType>TEXT|0s</StoredType>
+    </column>
+    <column id="701" parent="635" name="PhoneNumber">
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+      <StoredType>TEXT|0s</StoredType>
+    </column>
+    <key id="702" parent="635" name="PK_Suppliers">
+      <ColNames>Id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="703" parent="636" name="type">
+      <Position>1</Position>
+      <StoredType>TEXT|0s</StoredType>
+    </column>
+    <column id="704" parent="636" name="name">
+      <Position>2</Position>
+      <StoredType>TEXT|0s</StoredType>
+    </column>
+    <column id="705" parent="636" name="tbl_name">
+      <Position>3</Position>
+      <StoredType>TEXT|0s</StoredType>
+    </column>
+    <column id="706" parent="636" name="rootpage">
       <Position>4</Position>
       <StoredType>INT|0s</StoredType>
     </column>
-    <column id="664" parent="631" name="sql">
+    <column id="707" parent="636" name="sql">
       <Position>5</Position>
       <StoredType>TEXT|0s</StoredType>
     </column>
-    <column id="665" parent="632" name="name">
+    <column id="708" parent="637" name="name">
       <Position>1</Position>
     </column>
-    <column id="666" parent="632" name="seq">
+    <column id="709" parent="637" name="seq">
       <Position>2</Position>
     </column>
   </database-model>

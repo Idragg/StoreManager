@@ -14,18 +14,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="047ca166-fff1-4e17-894c-5693a5331ff2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.storeManager/.idea/dataSources/6725dffd-983a-4af5-8a9a-474a77e8b5ca.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.storeManager/.idea/dataSources/6725dffd-983a-4af5-8a9a-474a77e8b5ca/storage_v2/_src_/schema/main.uQUzAA.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.storeManager/.idea/dataSources/7f738adf-dfdd-4c40-9cf1-24ec52eb1875.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.storeManager/.idea/dataSources/7f738adf-dfdd-4c40-9cf1-24ec52eb1875/storage_v2/_src_/schema/main.uQUzAA.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.storeManager/.idea/dataSources/885642a6-7c1a-4530-a682-027bde48a824.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.storeManager/.idea/dataSources/885642a6-7c1a-4530-a682-027bde48a824/storage_v2/_src_/schema/main.uQUzAA.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.storeManager/.idea/dataSources/a70f3313-369b-4a00-995b-56fb939f647c.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.storeManager/.idea/dataSources/a70f3313-369b-4a00-995b-56fb939f647c/storage_v2/_src_/schema/main.uQUzAA.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.storeManager/.idea/dataSources/fe28d6bb-b0e2-4efd-b4ab-3b92a5be7616.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.storeManager/.idea/dataSources/fe28d6bb-b0e2-4efd-b4ab-3b92a5be7616/storage_v2/_src_/schema/main.uQUzAA.meta" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/Domain/Employee.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Domain/Order.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Domain/OrderLine.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Domain/Status.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Domain/Supplier.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.storeManager/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.storeManager/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.storeManager/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.storeManager/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DAL/EF/StoreManagerDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DAL/EF/StoreManagerDbContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DAL/RepositoryInMemory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DAL/RepositoryInMemory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/Product.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Product.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/Store.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Store.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +43,6 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/BL/Class1.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/BL/IManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/BL/IPriceStrategy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/BL/Manager.cs" root0="FORCE_HIGHLIGHTING" />
@@ -52,18 +50,19 @@
     <setting file="file://$PROJECT_DIR$/BL/WeightMeanPrice.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/BL/obj/BL.csproj.nuget.dgspec.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/BL/obj/Debug/net10.0/BL.sourcelink.json" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/DAL/Class1.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/DAL/EF/DataSeeder.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/DAL/EF/Repository.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/DAL/EF/RepositoryDbStoreManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/DAL/IRepository.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/DAL/Repository.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/DAL/obj/project.packagespec.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Domain/Category.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Domain/Class1.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Domain/Employee.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Domain/Order.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Domain/OrderLine.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Domain/Product.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Domain/Status.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Domain/Store.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Domain/StoreProduct.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Domain/Supplier.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/UI-CA/Program.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/UI-CA/extensions/CategoryExtensions.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/UI-CA/extensions/ProductExtensions.cs" root0="FORCE_HIGHLIGHTING" />

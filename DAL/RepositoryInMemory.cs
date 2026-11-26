@@ -8,6 +8,7 @@ public class RepositoryInMemory : IRepository
     private readonly ICollection<Store> _stores;
     private readonly ICollection<Category> _categories;
     private readonly ICollection<StoreProduct> _storeProducts;
+    private readonly ICollection<Order> _orders;
 
     public RepositoryInMemory()
     {
@@ -15,6 +16,7 @@ public class RepositoryInMemory : IRepository
         _products = new List<Product>();
         _stores = new List<Store>();
         _storeProducts = new List<StoreProduct>();
+        _orders = new List<Order>();
         Seed();
     }
 
