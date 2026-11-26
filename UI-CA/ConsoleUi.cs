@@ -27,6 +27,9 @@ public class ConsoleUi
                 case 1:
                     ShowAllProducts();
                     break;
+                case 2:
+                    ChosenPrice();
+                    break;
             }
         }
     }
@@ -37,6 +40,7 @@ public class ConsoleUi
         Console.WriteLine("==========================");
         Console.WriteLine("0) Quit");
         Console.WriteLine("1) Show all products");
+        Console.WriteLine("2) Show all products price");
         
         
         bool parseOk = false;
@@ -58,5 +62,39 @@ public class ConsoleUi
         {
             Console.WriteLine(product.InfoText());
         }
+    }
+
+    private int ShowPrice()
+    {
+        bool parseOk = false;
+        var choice = 0;
+        
+        while (!parseOk)
+        {
+            Console.WriteLine("Choos");
+            Console.WriteLine("======================");
+            Console.WriteLine("1) Mean Price");
+            Console.WriteLine("2) Weighted Mean Price");
+            Console.WriteLine("======================");
+            Console.Write("Chosen: ");
+            var input = Console.ReadLine();
+            parseOk = int.TryParse(input, out choice);
+        }
+        return choice;
+    }
+
+    private void ChosenPrice()
+    {
+        var price = 0.0;
+        switch (ShowPrice())
+        {
+            case 1:  price = new MeanPrice(_manager).GetPrice();
+                Console.WriteLine($"The mean price is: {price}");
+                break;
+            case 2:  price = new WeightMeanPrice(_manager).GetPrice();
+                Console.WriteLine($"The weighted mean price is: {price}");
+                break;
+        }
+        
     }
 }
