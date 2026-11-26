@@ -1,4 +1,4 @@
-using StoreManager.Domain;
+using StoreManager.BL.Domain;
 
 namespace StoreManager.DAL.BL;
 
@@ -14,5 +14,10 @@ public class Manager : IManager
     {
         
         return _repository.ReadAllProducts();
+    }
+
+    public IEnumerable<Category> GetAllCategories()
+    {
+        return _repository.ReadAllCategories();
     }
 }

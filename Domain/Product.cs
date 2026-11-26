@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace StoreManager.Domain;
+namespace StoreManager.BL.Domain;
 
 public class Product
 {

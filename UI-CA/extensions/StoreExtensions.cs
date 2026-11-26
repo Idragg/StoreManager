@@ -1,4 +1,4 @@
-using StoreManager.Domain;
+using StoreManager.BL.Domain;
 
 namespace StoreManager.UI.CA.extensions;
 

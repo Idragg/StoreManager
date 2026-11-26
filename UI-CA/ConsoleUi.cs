@@ -1,4 +1,5 @@
-﻿using StoreManager.DAL.BL;
+﻿using StoreManager.BL.Domain;
+using StoreManager.DAL.BL;
 using StoreManager.UI.CA.extensions;
 
 namespace StoreManager.UI.CA;
@@ -47,7 +48,7 @@ public class ConsoleUi
         int choice = 0;
         while (!parseOk)
         {
-            Console.WriteLine("Your choice is: ");
+            Console.Write("Your choice is: ");
             var input = Console.ReadLine();
             
             parseOk = int.TryParse(input, out choice);
@@ -60,7 +61,15 @@ public class ConsoleUi
     {
         foreach (var product in _manager.GetAllProducts())
         {
-            Console.WriteLine(product.InfoText());
+            Console.WriteLine($"{product.Id} - {product.InfoText()}");
+        }
+    }
+    
+    private void ShowAllCategories()
+    {
+        foreach (var category in _manager.GetAllCategories())
+        {
+            Console.WriteLine($"{category.Id} - {category.Name}");
         }
     }
 
@@ -85,16 +94,50 @@ public class ConsoleUi
 
     private void ChosenPrice()
     {
-        var price = 0.0;
+        bool parseOk = false;
+        int choiceId = 0;
+        while (!parseOk)
+        {
+            ShowAllCategories();
+            Console.Write("Chosen ID of category if you give no Id then its price of all products: ");
+
+            parseOk = int.TryParse(Console.ReadLine(), out choiceId);
+
+            if (!parseOk)
+            {
+                Console.WriteLine("Invalid input.");
+            }
+        }
+
+        Category? category = null;
+
+        if (choiceId != 0)
+        {
+            category = _manager.GetAllCategories()
+                .FirstOrDefault(c => c.Id == choiceId);
+
+            if (category == null)
+            {
+                Console.WriteLine("Category not found.");
+                return;
+            }
+        }
+
         switch (ShowPrice())
         {
-            case 1:  price = new MeanPrice(_manager).GetPrice();
-                Console.WriteLine($"The mean price is: {price}");
+            case 1:
+                var meanPrice = new MeanPrice(_manager).GetPrice(category);
+                Console.WriteLine($"The mean price is: {meanPrice}");
                 break;
-            case 2:  price = new WeightMeanPrice(_manager).GetPrice();
-                Console.WriteLine($"The weighted mean price is: {price}");
+
+            case 2:
+                var weightMeanPrice = new WeightMeanPrice(_manager).GetPrice(category);
+                Console.WriteLine($"The weighted mean price is: {weightMeanPrice}");
+                break;
+
+            default:
+                Console.WriteLine("Invalid price strategy.");
                 break;
         }
-        
     }
 }

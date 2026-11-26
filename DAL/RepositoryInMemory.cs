@@ -1,4 +1,4 @@
-using StoreManager.Domain;
+using StoreManager.BL.Domain;
 
 namespace StoreManager.DAL;
 
@@ -189,5 +189,10 @@ public class RepositoryInMemory : IRepository
     public IEnumerable<Product> ReadAllProducts()
     {
         return _products;
+    }
+
+    public IEnumerable<Category> ReadAllCategories()
+    {
+        return _categories;
     }
 }

@@ -1,4 +1,4 @@
-using StoreManager.Domain;
+using StoreManager.BL.Domain;
 
 namespace StoreManager.DAL.BL;
 
@@ -10,7 +10,7 @@ public class WeightMeanPrice : IPriceStrategy
         _manager = manager;
     }
 
-    public double GetPrice()
+    public double GetPrice(Category? category)
     {
         var weight = 0;
         var price = 0.0;
