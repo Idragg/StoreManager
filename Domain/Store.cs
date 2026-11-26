@@ -9,7 +9,7 @@ public class Store
     [RegularExpression("^[A-Z].*")]
     public string Name { get; set; }
     [Required]
-    public ICollection<Product> Products { get; set; }
+    public ICollection<StoreProduct> StoreProducts { get; set; }
     [Required]
     public ICollection<Category> Categories { get; set; }
 }

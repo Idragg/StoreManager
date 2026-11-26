@@ -4,8 +4,7 @@ namespace StoreManager.DAL.EF;
 
 public class DataSeeder
 {
-
-    public static void Seed(StoreManagerDbContext dbContext)
+    public static void Seed(StoreManagerDbContext context)
     {
         // Categories
         var fluids = new Category
@@ -34,64 +33,56 @@ public class DataSeeder
         {
             Name = "Milk",
             Category = fluids,
-            Price = 2.30,
-            Stock = 100
+            StoreProducts = new List<StoreProduct>()
         };
 
         var orangeJuice = new Product
         {
             Name = "Orange Juice",
             Category = fluids,
-            Price = 2.75,
-            Stock = 50
+            StoreProducts = new List<StoreProduct>()
         };
 
         var water = new Product
         {
             Name = "Water",
             Category = fluids,
-            Price = 1.20,
-            Stock = 200
+            StoreProducts = new List<StoreProduct>()
         };
 
         var bread = new Product
         {
             Name = "Bread",
             Category = food,
-            Price = 2.50,
-            Stock = 40
+            StoreProducts = new List<StoreProduct>()
         };
 
         var pasta = new Product
         {
             Name = "Pasta",
             Category = food,
-            Price = 1.80,
-            Stock = 75
+            StoreProducts = new List<StoreProduct>()
         };
 
         var rice = new Product
         {
             Name = "Rice",
             Category = food,
-            Price = 3.20,
-            Stock = 60
+            StoreProducts = new List<StoreProduct>()
         };
 
         var headphones = new Product
         {
             Name = "Headphones",
             Category = electronics,
-            Price = 49.99,
-            Stock = 15
+            StoreProducts = new List<StoreProduct>()
         };
 
         var keyboard = new Product
         {
             Name = "Keyboard",
             Category = electronics,
-            Price = 34.99,
-            Stock = 25
+            StoreProducts = new List<StoreProduct>()
         };
 
         // Category relationships
@@ -110,31 +101,41 @@ public class DataSeeder
         var storeAntwerp = new Store
         {
             Name = "Antwerp",
-            Products = new List<Product>(),
+            StoreProducts = new List<StoreProduct>(),
             Categories = new List<Category>()
         };
 
         var storeBrussels = new Store
         {
-            
             Name = "Brussels",
-            Products = new List<Product>(),
+            StoreProducts = new List<StoreProduct>(),
             Categories = new List<Category>()
         };
 
-        // Antwerp stock
-        storeAntwerp.Products.Add(milk);
-        storeAntwerp.Products.Add(orangeJuice);
-        storeAntwerp.Products.Add(bread);
-        storeAntwerp.Products.Add(pasta);
-        storeAntwerp.Products.Add(headphones);
+        // StoreProduct relationships
+        var storeProducts = new List<StoreProduct>
+        {
+            // Antwerp
+            new StoreProduct { Store = storeAntwerp, Product = milk, Stock = 100, SellingPrice = 2.30 },
+            new StoreProduct { Store = storeAntwerp, Product = orangeJuice, Stock = 50, SellingPrice = 2.75 },
+            new StoreProduct { Store = storeAntwerp, Product = bread, Stock = 40, SellingPrice = 2.50 },
+            new StoreProduct { Store = storeAntwerp, Product = pasta, Stock = 75, SellingPrice = 1.80 },
+            new StoreProduct { Store = storeAntwerp, Product = headphones, Stock = 15, SellingPrice = 49.99 },
 
-        // Brussels stock
-        storeBrussels.Products.Add(water);
-        storeBrussels.Products.Add(bread);
-        storeBrussels.Products.Add(rice);
-        storeBrussels.Products.Add(keyboard);
-        storeBrussels.Products.Add(headphones);
+            // Brussels
+            new StoreProduct { Store = storeBrussels, Product = milk, Stock = 45, SellingPrice = 2.50 },
+            new StoreProduct { Store = storeBrussels, Product = water, Stock = 200, SellingPrice = 1.20 },
+            new StoreProduct { Store = storeBrussels, Product = bread, Stock = 30, SellingPrice = 2.60 },
+            new StoreProduct { Store = storeBrussels, Product = rice, Stock = 60, SellingPrice = 3.20 },
+            new StoreProduct { Store = storeBrussels, Product = keyboard, Stock = 25, SellingPrice = 34.99 }
+        };
+
+        // Add StoreProduct relationships to both sides
+        foreach (var storeProduct in storeProducts)
+        {
+            storeProduct.Store.StoreProducts.Add(storeProduct);
+            storeProduct.Product.StoreProducts.Add(storeProduct);
+        }
 
         // Store categories
         storeAntwerp.Categories.Add(fluids);
@@ -146,23 +147,23 @@ public class DataSeeder
         storeBrussels.Categories.Add(electronics);
 
         // Add to repository collections
+        context.Add(fluids);
+        context.Add(food);
+        context.Add(electronics);
 
-        dbContext.Categories.Add(fluids);
-        dbContext.Categories.Add(food);
-        dbContext.Categories.Add(electronics);
+        context.Add(milk);
+        context.Add(orangeJuice);
+        context.Add(water);
+        context.Add(bread);
+        context.Add(pasta);
+        context.Add(rice);
+        context.Add(headphones);
+        context.Add(keyboard);
 
-        dbContext.Products.Add(milk);
-        dbContext.Products.Add(orangeJuice);
-        dbContext.Products.Add(water);
-        dbContext.Products.Add(bread);
-        dbContext.Products.Add(pasta);
-        dbContext.Products.Add(rice);
-        dbContext.Products.Add(headphones);
-        dbContext.Products.Add(keyboard);
+        context.Add(storeAntwerp);
+        context.Add(storeBrussels);
 
-        dbContext.Stores.Add(storeBrussels);
-        dbContext.Stores.Add(storeAntwerp);
-        
-        dbContext.SaveChanges();
+        context.SaveChanges();
+        context.ChangeTracker.Clear();
     }
 }

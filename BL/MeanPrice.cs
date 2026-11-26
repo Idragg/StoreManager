@@ -16,15 +16,14 @@ public class MeanPrice : IPriceStrategy
         double price = 0;
         int count = 0;
 
-        foreach (var product in _manager.GetAllProducts())
+        foreach (var storeProduct in _manager.GetAllStoreProducts())
         {
-            if (category == null || product.Category.Id == category.Id)
+            if (category == null || storeProduct.Product.Category.Id == category.Id)
             {
-                price += product.Price;
+                price += storeProduct.SellingPrice;
                 count++;
             }
         }
-
         return count == 0 ? 0 : price / count;
     }
 }

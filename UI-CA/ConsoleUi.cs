@@ -7,6 +7,7 @@ namespace StoreManager.UI.CA;
 public class ConsoleUi
 {
     private readonly IManager _manager;
+
     public ConsoleUi(IManager manager)
     {
         _manager = manager;
@@ -18,7 +19,6 @@ public class ConsoleUi
 
         while (!quit)
         {
-
             switch (ReadChoices())
             {
                 case 0:
@@ -42,15 +42,15 @@ public class ConsoleUi
         Console.WriteLine("0) Quit");
         Console.WriteLine("1) Show all products");
         Console.WriteLine("2) Show all products price");
-        
-        
+
+
         bool parseOk = false;
         int choice = 0;
         while (!parseOk)
         {
             Console.Write("Your choice is: ");
             var input = Console.ReadLine();
-            
+
             parseOk = int.TryParse(input, out choice);
         }
 
@@ -64,7 +64,7 @@ public class ConsoleUi
             Console.WriteLine($"{product.Id} - {product.InfoText()}");
         }
     }
-    
+
     private void ShowAllCategories()
     {
         foreach (var category in _manager.GetAllCategories())
@@ -77,7 +77,7 @@ public class ConsoleUi
     {
         bool parseOk = false;
         var choice = 0;
-        
+
         while (!parseOk)
         {
             Console.WriteLine("Choos");
@@ -89,6 +89,7 @@ public class ConsoleUi
             var input = Console.ReadLine();
             parseOk = int.TryParse(input, out choice);
         }
+
         return choice;
     }
 
@@ -127,12 +128,12 @@ public class ConsoleUi
         {
             case 1:
                 var meanPrice = new MeanPrice(_manager).GetPrice(category);
-                Console.WriteLine($"The mean price is: {meanPrice}");
+                Console.WriteLine($"The mean price is: {Math.Round(meanPrice, 2)}");
                 break;
 
             case 2:
                 var weightMeanPrice = new WeightMeanPrice(_manager).GetPrice(category);
-                Console.WriteLine($"The weighted mean price is: {weightMeanPrice}");
+                Console.WriteLine($"The weighted mean price is: {Math.Round(weightMeanPrice, 2)}");
                 break;
 
             default:

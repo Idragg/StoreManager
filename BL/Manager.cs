@@ -20,4 +20,9 @@ public class Manager : IManager
     {
         return _repository.ReadAllCategories();
     }
+
+    public IEnumerable<StoreProduct> GetAllStoreProducts()
+    {
+        return _repository.ReadAllStoreProducts();
+    }
 }

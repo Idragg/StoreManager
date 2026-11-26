@@ -6,4 +6,5 @@ public interface IManager
 {
     public IEnumerable<Product> GetAllProducts();
     public IEnumerable<Category> GetAllCategories();
+    public IEnumerable<StoreProduct> GetAllStoreProducts();
 }

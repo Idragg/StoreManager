@@ -9,11 +9,6 @@ public class Product
     [RegularExpression("^[A-Z].*")]
     public string Name { get; set; }
     [Required]
-    [Range(0, int.MaxValue)]
-    public double Price { get; set; }
-    [Required]
-    [Range(0, int.MaxValue)]
-    public int Stock { get; set; }
-    [Required]
     public Category Category { get; set; }
+    public ICollection<StoreProduct> StoreProducts { get; set; }
 }

@@ -15,10 +15,10 @@ public class WeightMeanPrice : IPriceStrategy
         var weight = 0;
         var price = 0.0;
 
-        foreach (var product in _manager.GetAllProducts())
+        foreach (var storeProduct in _manager.GetAllStoreProducts())
         {
-            price += product.Price * product.Stock;
-            weight += product.Stock;
+            price += storeProduct.SellingPrice * storeProduct.Stock;
+            weight += storeProduct.Stock;
         }
 
         return weight == 0 ? 0 : price / weight;

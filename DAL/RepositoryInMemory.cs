@@ -7,12 +7,14 @@ public class RepositoryInMemory : IRepository
     private readonly ICollection<Product> _products;
     private readonly ICollection<Store> _stores;
     private readonly ICollection<Category> _categories;
+    private readonly ICollection<StoreProduct> _storeProducts;
 
     public RepositoryInMemory()
     {
         _categories = new List<Category>();
         _products = new List<Product>();
         _stores = new List<Store>();
+        _storeProducts = new List<StoreProduct>();
         Seed();
     }
 
@@ -49,8 +51,7 @@ public class RepositoryInMemory : IRepository
             Id = 1,
             Name = "Milk",
             Category = fluids,
-            Price = 2.30,
-            Stock = 100
+            StoreProducts = new List<StoreProduct>()
         };
 
         var orangeJuice = new Product
@@ -58,8 +59,7 @@ public class RepositoryInMemory : IRepository
             Id = 2,
             Name = "Orange Juice",
             Category = fluids,
-            Price = 2.75,
-            Stock = 50
+            StoreProducts = new List<StoreProduct>()
         };
 
         var water = new Product
@@ -67,8 +67,7 @@ public class RepositoryInMemory : IRepository
             Id = 3,
             Name = "Water",
             Category = fluids,
-            Price = 1.20,
-            Stock = 200
+            StoreProducts = new List<StoreProduct>()
         };
 
         var bread = new Product
@@ -76,8 +75,7 @@ public class RepositoryInMemory : IRepository
             Id = 4,
             Name = "Bread",
             Category = food,
-            Price = 2.50,
-            Stock = 40
+            StoreProducts = new List<StoreProduct>()
         };
 
         var pasta = new Product
@@ -85,8 +83,7 @@ public class RepositoryInMemory : IRepository
             Id = 5,
             Name = "Pasta",
             Category = food,
-            Price = 1.80,
-            Stock = 75
+            StoreProducts = new List<StoreProduct>()
         };
 
         var rice = new Product
@@ -94,8 +91,7 @@ public class RepositoryInMemory : IRepository
             Id = 6,
             Name = "Rice",
             Category = food,
-            Price = 3.20,
-            Stock = 60
+            StoreProducts = new List<StoreProduct>()
         };
 
         var headphones = new Product
@@ -103,8 +99,7 @@ public class RepositoryInMemory : IRepository
             Id = 7,
             Name = "Headphones",
             Category = electronics,
-            Price = 49.99,
-            Stock = 15
+            StoreProducts = new List<StoreProduct>()
         };
 
         var keyboard = new Product
@@ -112,8 +107,7 @@ public class RepositoryInMemory : IRepository
             Id = 8,
             Name = "Keyboard",
             Category = electronics,
-            Price = 34.99,
-            Stock = 25
+            StoreProducts = new List<StoreProduct>()
         };
 
         // Category relationships
@@ -133,7 +127,7 @@ public class RepositoryInMemory : IRepository
         {
             Id = 1,
             Name = "Antwerp",
-            Products = new List<Product>(),
+            StoreProducts = new List<StoreProduct>(),
             Categories = new List<Category>()
         };
 
@@ -141,23 +135,34 @@ public class RepositoryInMemory : IRepository
         {
             Id = 2,
             Name = "Brussels",
-            Products = new List<Product>(),
+            StoreProducts = new List<StoreProduct>(),
             Categories = new List<Category>()
         };
 
-        // Antwerp stock
-        storeAntwerp.Products.Add(milk);
-        storeAntwerp.Products.Add(orangeJuice);
-        storeAntwerp.Products.Add(bread);
-        storeAntwerp.Products.Add(pasta);
-        storeAntwerp.Products.Add(headphones);
+        // StoreProduct relationships
+        var storeProducts = new List<StoreProduct>
+        {
+            // Antwerp
+            new StoreProduct { Store = storeAntwerp, Product = milk, Stock = 100, SellingPrice = 2.30 },
+            new StoreProduct { Store = storeAntwerp, Product = orangeJuice, Stock = 50, SellingPrice = 2.75 },
+            new StoreProduct { Store = storeAntwerp, Product = bread, Stock = 40, SellingPrice = 2.50 },
+            new StoreProduct { Store = storeAntwerp, Product = pasta, Stock = 75, SellingPrice = 1.80 },
+            new StoreProduct { Store = storeAntwerp, Product = headphones, Stock = 15, SellingPrice = 49.99 },
 
-        // Brussels stock
-        storeBrussels.Products.Add(water);
-        storeBrussels.Products.Add(bread);
-        storeBrussels.Products.Add(rice);
-        storeBrussels.Products.Add(keyboard);
-        storeBrussels.Products.Add(headphones);
+            // Brussels
+            new StoreProduct { Store = storeBrussels, Product = milk, Stock = 45, SellingPrice = 2.50 },
+            new StoreProduct { Store = storeBrussels, Product = water, Stock = 200, SellingPrice = 1.20 },
+            new StoreProduct { Store = storeBrussels, Product = bread, Stock = 30, SellingPrice = 2.60 },
+            new StoreProduct { Store = storeBrussels, Product = rice, Stock = 60, SellingPrice = 3.20 },
+            new StoreProduct { Store = storeBrussels, Product = keyboard, Stock = 25, SellingPrice = 34.99 }
+        };
+
+        // Add StoreProduct relationships to both sides
+        foreach (var storeProduct in storeProducts)
+        {
+            storeProduct.Store.StoreProducts.Add(storeProduct);
+            storeProduct.Product.StoreProducts.Add(storeProduct);
+        }
 
         // Store categories
         storeAntwerp.Categories.Add(fluids);
@@ -194,5 +199,10 @@ public class RepositoryInMemory : IRepository
     public IEnumerable<Category> ReadAllCategories()
     {
         return _categories;
+    }
+
+    public IEnumerable<StoreProduct> ReadAllStoreProducts()
+    {
+        return _storeProducts;
     }
 }

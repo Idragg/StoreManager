@@ -4,6 +4,7 @@ using StoreManager.DAL.EF;
 using StoreManager.UI.CA;
 
 Console.OutputEncoding = System.Text.Encoding.UTF8;
+
 var dbOptionsBuilder
     = new DbContextOptionsBuilder<StoreManagerDbContext>();
 dbOptionsBuilder.UseSqlite("Data Source=StoreManager.db");
