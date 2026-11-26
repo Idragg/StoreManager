@@ -1,3 +1,4 @@
+using System.ComponentModel.DataAnnotations;
 using Microsoft.EntityFrameworkCore;
 using StoreManager.BL.Domain;
 
@@ -30,5 +31,28 @@ public class Repository : IRepository
         return _context.StoreProducts.
             Include(sp => sp.Product)
             .ToList();
+    }
+    
+    private void Validate(object o)
+    {
+        // Validator.ValidateObject(o, new ValidationContext(o), true);
+
+        var validationResults = new List<ValidationResult>();
+        var validationSuccessful = Validator.TryValidateObject(o, new ValidationContext(o), validationResults, true);
+        if (!validationSuccessful)
+        {
+            var message = "";
+            foreach (var result in validationResults)
+            {
+                if (message.Length != 0)
+                {
+                    message += "\n";
+                }
+
+                message += result.ErrorMessage;
+            }
+
+            throw new ValidationException(message);
+        }
     }
 }

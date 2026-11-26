@@ -15,10 +15,10 @@
   <component name="ChangeListManager">
     <list default="true" id="047ca166-fff1-4e17-894c-5693a5331ff2" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.storeManager/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.storeManager/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DAL/EF/DataSeeder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DAL/EF/DataSeeder.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/Category.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Category.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/Employee.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Employee.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Domain/Order.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Order.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Domain/OrderLine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/OrderLine.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Domain/Status.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/OrderStatus.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

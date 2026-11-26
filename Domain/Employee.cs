@@ -5,7 +5,9 @@ namespace StoreManager.BL.Domain;
 public class Employee
 {
     public int Id { get; set; }
+    [Length(5,30)]
     [Required] public string FirstName { get; set; }
+    [Length(5, 40)]
     [Required] public string LastName { get; set; }
 
     [Required]
