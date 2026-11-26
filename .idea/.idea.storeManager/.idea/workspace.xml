@@ -14,27 +14,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="047ca166-fff1-4e17-894c-5693a5331ff2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/BL/IManager.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BL/Manager.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DAL/IRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DAL/RepositoryInMemory.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UI-CA/extensions/CategoryExtensions.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UI-CA/extensions/ProductExtensions.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UI-CA/extensions/StoreExtensions.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.storeManager/.idea/dataSources/6725dffd-983a-4af5-8a9a-474a77e8b5ca.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.storeManager/.idea/dataSources/6725dffd-983a-4af5-8a9a-474a77e8b5ca/storage_v2/_src_/schema/main.uQUzAA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.storeManager/.idea/dataSources/7f738adf-dfdd-4c40-9cf1-24ec52eb1875.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.storeManager/.idea/dataSources/7f738adf-dfdd-4c40-9cf1-24ec52eb1875/storage_v2/_src_/schema/main.uQUzAA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.storeManager/.idea/dataSources/885642a6-7c1a-4530-a682-027bde48a824.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.storeManager/.idea/dataSources/885642a6-7c1a-4530-a682-027bde48a824/storage_v2/_src_/schema/main.uQUzAA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.storeManager/.idea/dataSources/a70f3313-369b-4a00-995b-56fb939f647c.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.storeManager/.idea/dataSources/a70f3313-369b-4a00-995b-56fb939f647c/storage_v2/_src_/schema/main.uQUzAA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.storeManager/.idea/dataSources/fe28d6bb-b0e2-4efd-b4ab-3b92a5be7616.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.storeManager/.idea/dataSources/fe28d6bb-b0e2-4efd-b4ab-3b92a5be7616/storage_v2/_src_/schema/main.uQUzAA.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.storeManager/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.storeManager/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Domain/Category.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Category.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Domain/Domain.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Domain.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Domain/Product.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Product.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Domain/Store.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Store.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/StoreManager.sln" beforeDir="false" afterPath="$PROJECT_DIR$/StoreManager.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI-CA/ConsoleUi.cs" beforeDir="false" afterPath="$PROJECT_DIR$/UI-CA/ConsoleUi.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI-CA/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/UI-CA/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI-CA/UI-CA.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/UI-CA/UI-CA.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseLocalColorSettings">
+    <colors>
+      <entry key="69fef7db-375a-4076-bb1d-77577fdf62d0" value="" />
+    </colors>
   </component>
   <component name="DpaMonitoringSettings">
     <option name="firstShow" value="false" />
@@ -45,18 +46,31 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/BL/Class1.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/BL/IManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BL/IPriceStrategy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/BL/Manager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BL/MeanPrice.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BL/WeightMeanPrice.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BL/obj/BL.csproj.nuget.dgspec.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BL/obj/Debug/net10.0/BL.sourcelink.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/DAL/Class1.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DAL/EF/DataSeeder.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DAL/EF/Repository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DAL/EF/RepositoryDbStoreManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/DAL/IRepository.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/DAL/Repository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DAL/obj/project.packagespec.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Domain/Category.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Domain/Class1.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Domain/Product.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Domain/Store.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Domain/StoreProduct.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/UI-CA/Program.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/UI-CA/extensions/CategoryExtensions.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/UI-CA/extensions/ProductExtensions.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/UI-CA/extensions/StoreExtensions.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/UI-CA/obj/Debug/net10.0/UI-CA.sourcelink.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/UI-CA/obj/project.packagespec.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/UI-CA/obj/storeManager.csproj.nuget.dgspec.json" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6,
@@ -67,27 +81,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    ".NET Project.storeManager.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.readMode.enableVisualFormatting": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "cidr.known.project.marker": "true",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/github/StoreManager",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.lookFeel"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;.NET Project.storeManager.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/github/StoreManager&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="storeManager" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
