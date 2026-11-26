@@ -1,6 +1,6 @@
 namespace StoreManager.BL.Domain;
 
-public enum Status
+public enum OrderStatus
 {
     Pending,
     Confirmed,

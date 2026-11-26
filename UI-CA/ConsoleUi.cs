@@ -100,7 +100,7 @@ public class ConsoleUi
         while (!parseOk)
         {
             ShowAllCategories();
-            Console.Write("Chosen ID of category if you give no Id then its price of all products: ");
+            Console.Write("Chosen ID of category: ");
 
             parseOk = int.TryParse(Console.ReadLine(), out choiceId);
 
